@@ -22,4 +22,4 @@ class Index
 }
 
 $ind = new Index();
-$ind->showResult(44);
+$ind->showResult("44");
