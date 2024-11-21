@@ -1,7 +1,7 @@
 <?php
 class Driver
 {
-    public $name, $age,$family,$hourlyRate,$martialStatus;
+    public $name,$age,$family,$hourlyRate,$martialStatus;
 
     public function setName (string $name)
     {
@@ -22,12 +22,12 @@ class Driver
         return $this->age;
     }
 
-    public function setfamily(string $family)
+    public function setfamily(array $family) 
     {
         $this->family = $family;
     }
 
-    public function getfamily() : string
+    public function getfamily() :array
     {
         return  $this->family;
     }
@@ -107,7 +107,7 @@ class Rent
 $dmg = new Driver();
 $dmg->setName("Dhaka");
 $dmg->setAge(23);
-$dmg->setfamily("Mia");
+$dmg->setfamily(["Mia","Mia1","Mia2"]);
 $dmg->setHourlyRate(1000);
 $dmg->setMartialStatus(true);
 
@@ -137,7 +137,10 @@ $serialData = serialize($list);
 echo "<br>";
 echo "<pre>";
 echo $serialData;
+echo "<br><br>";
+echo "<hr>";
 $aee = unserialize($serialData);
+echo "<pre>". print_r($aee,true) ."</pre>";
 echo "<br>";
-echo "<pre>";
-var_dump($aee);
+// echo "<pre>";
+// var_dump($aee);
